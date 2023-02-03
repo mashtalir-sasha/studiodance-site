@@ -1,0 +1,96 @@
+@import "vars"
+
+//Large: ≥992px
++media-breakpoint-down(lg)
+
+//Medium: ≥1199px
++media-breakpoint-down(md)
+	.dev
+		float: none
+		margin: 20px auto
+
+//Small: ≥991px
++media-breakpoint-down(sm)
+	.content-padding
+		padding-top: 50px
+		padding-bottom: 50px
+	.head
+		height: auto
+		max-height: inherit
+		padding-bottom: 0
+		&-logo
+			width: fit-content
+			margin: 0 auto
+		&__img
+			position: static
+			width: 100%
+			height: 500px
+	.about
+		&__img
+			margin: 0 auto
+		&__btn
+			margin: 0 auto
+		&__title
+			font-size: 24px
+			padding-left: 40px
+			&:after
+				top: -80px
+			&:before
+				top: -25px
+				left: 100px
+		&__text
+			padding-left: 40px
+		&__list	
+			margin-left: 40px
+	.new
+		&-ttl
+			font-size: 22px
+			text-align: center
+			span
+				font-size: 14px
+		&-subttl
+			display: block
+			width: fit-content
+			margin: 0 auto 30px
+			font-size: 14px
+			&.desktop
+				display: none
+			&.mobile
+				display: block
+				background-color: transparent
+				span
+					font-size: 18px
+					display: table
+					background-color: #fff
+					margin: 0 auto
+					& + span
+						margin-top: 5px
+		&__btn
+			margin: 0 auto
+
+
+//Extra small: 768
++media-breakpoint-down(xs)
+	.new-subttl
+		text-align: center
+	.foot
+		&__ttl
+			text-align: center
+		&__phone
+			margin-left: auto
+			margin-right: auto
+		&__addr
+			text-align: center
+		&-soc
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 40px
+
+	.timetable
+		overflow: hidden
+	
+	.scroll
+		overflow-x: scroll
+	
+	.table-content .th__main
+		min-width: 120px
