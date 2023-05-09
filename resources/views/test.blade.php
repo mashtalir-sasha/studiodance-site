@@ -14,6 +14,8 @@
 	<script src="/assets/libs/jquery.validate.js"></script>
 	<script src="/assets/libs/jquery-ui-slider/jquery-ui.js"></script>
 
+	<meta name="csrf-token" content="{{ csrf_token() }}">
+
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-W1Z0QD9WBQ"></script>
 	<script>
@@ -65,6 +67,11 @@
 			<div class="main-progress__extender"></div>
 			<!-- STEPS TEXT START -->
 			<div class="main-progress__text">
+				<b>Залишилось відповісти на 4 питання,</b> щоб дізнатись розклад та вартість
+			</div>
+			<!-- STEPS TEXT END -->
+			<!-- STEPS TEXT START -->
+			<div class="main-progress__text">
 				<b>Залишилось відповісти на 3 питання,</b> щоб дізнатись розклад та вартість
 			</div>
 			<!-- STEPS TEXT END -->
@@ -99,42 +106,24 @@
 			<!-- ONE-STEP START -->
 			<div class="step-slide step-slide-1">
 				<h3 class="step-slide__title">
-				Скільки Вам/дитині років?
+				Підбираєте танці для себе чи для дитини?
 				</h3>
 				<div class="step-slide__grid">
 					<!-- ONE-ITEM START -->
 					<label for="step1-1" class="pick-item">
-					    <input class="pick-item__input" type="radio" name="step1" id="step1-1" value="4-6 лет">
-						<div class="pick-item__label">4-6 років</div>
+					    <input class="pick-item__input" type="radio" name="step1" id="step1-1" value="Для себе">
+						<div class="pick-item__label">Для себе</div>
 					</label>
 					<!-- ONE-ITEM END -->
 					<!-- ONE-ITEM START -->
 					<label for="step1-2" class="pick-item">
-					    <input class="pick-item__input" type="radio" name="step1" id="step1-2" value="7-9 лет">
-						<div class="pick-item__label">7-9 років</div>
-					</label>
-					<!-- ONE-ITEM END -->
-					<!-- ONE-ITEM START -->
-					<label for="step1-3" class="pick-item">
-					    <input class="pick-item__input" type="radio" name="step1" id="step1-3" value="10-12 лет">
-						<div class="pick-item__label">10-12 років</div>
-					</label>
-					<!-- ONE-ITEM END -->
-					<!-- ONE-ITEM START -->
-					<label for="step1-4" class="pick-item">
-					    <input class="pick-item__input" type="radio" name="step1" id="step1-4" value="13-15 лет">
-						<div class="pick-item__label">13-15 років</div>
-					</label>
-					<!-- ONE-ITEM END -->
-					<!-- ONE-ITEM START -->
-					<label for="step1-5" class="pick-item">
-					    <input class="pick-item__input" type="radio" name="step1" id="step1-5" value="16+">
-						<div class="pick-item__label">16+</div>
+					    <input class="pick-item__input" type="radio" name="step1" id="step1-2" value="Для дитини">
+						<div class="pick-item__label">Для дитини</div>
 					</label>
 					<!-- ONE-ITEM END -->
 
 
-					<div id="next1" class="btn-next-container"></div>
+					<div id="next2" class="btn-next-container"></div>
 				</div>
 				<!-- <input type="hidden" class="hidden-input-1" name="step1"> -->
 			</div>
@@ -144,87 +133,132 @@
 			<!-- ONE-STEP START -->
 			<div class="step-slide step-slide-2">
 				<h3 class="step-slide__title">
+				Скільки Вам/дитині років?
+				</h3>
+				<div class="step-slide__grid">
+					<!-- ONE-ITEM START -->
+					<label for="step2-1" class="pick-item">
+					    <input class="pick-item__input" type="radio" name="step2" id="step2-1" value="4-6 лет">
+						<div class="pick-item__label">4-6 років</div>
+					</label>
+					<!-- ONE-ITEM END -->
+					<!-- ONE-ITEM START -->
+					<label for="step2-2" class="pick-item">
+					    <input class="pick-item__input" type="radio" name="step2" id="step2-2" value="7-9 лет">
+						<div class="pick-item__label">7-9 років</div>
+					</label>
+					<!-- ONE-ITEM END -->
+					<!-- ONE-ITEM START -->
+					<label for="step2-3" class="pick-item">
+					    <input class="pick-item__input" type="radio" name="step2" id="step2-3" value="10-12 лет">
+						<div class="pick-item__label">10-12 років</div>
+					</label>
+					<!-- ONE-ITEM END -->
+					<!-- ONE-ITEM START -->
+					<label for="step2-4" class="pick-item">
+					    <input class="pick-item__input" type="radio" name="step2" id="step2-4" value="13-15 лет">
+						<div class="pick-item__label">13-15 років</div>
+					</label>
+					<!-- ONE-ITEM END -->
+					<!-- ONE-ITEM START -->
+					<label for="step2-5" class="pick-item">
+					    <input class="pick-item__input" type="radio" name="step2" id="step2-5" value="16+">
+						<div class="pick-item__label">16+</div>
+					</label>
+					<!-- ONE-ITEM END -->
+
+
+					<div id="next3" class="btn-next-container"></div>
+				</div>
+				<!-- <input type="hidden" class="hidden-input-1" name="step2"> -->
+			</div>
+			<!-- ONE-STEP END -->
+
+
+			<!-- ONE-STEP START -->
+			<div class="step-slide step-slide-3">
+				<h3 class="step-slide__title">
 				Чи займались раніше танцями?
 				</h3>
 				<div class="step-slide__grid">
 
 					<!-- ONE-ITEM START -->
-					<label for="step2-1" class="pick-item">
-					    <input class="pick-item__input" type="radio" name="step2" id="step2-1" value="Так">
+					<label for="step3-1" class="pick-item">
+					    <input class="pick-item__input" type="radio" name="step3" id="step3-1" value="Так">
 						<div class="pick-item__label">Так</div>
 					</label>
 					<!-- ONE-ITEM END -->
 					<!-- ONE-ITEM START -->
-					<label for="step2-2" class="pick-item">
-					    <input class="pick-item__input" type="radio" name="step2" id="step2-2" value="Ні">
+					<label for="step3-2" class="pick-item">
+					    <input class="pick-item__input" type="radio" name="step3" id="step3-2" value="Ні">
 						<div class="pick-item__label">Ні</div>
 					</label>
 
-					<div id="next2" class="btn-next-container"></div>
+					<div id="next4" class="btn-next-container"></div>
 				</div>
 				<!-- <input type="hidden" class="hidden-input-2" name="step2"> -->
 			</div>
 			<!-- ONE-STEP END -->
 
 			<!-- ONE-STEP START -->
-			<div class="step-slide step-slide-3">
+			<div class="step-slide step-slide-4">
 				<h3 class="step-slide__title">
 					Який напрямок Вам більше всього подобається?
 				</h3>
 				<div class="step-slide__grid">
 					<!-- ONE-ITEM START -->
-					<div for="step3-1" class="pick-item">
-						<label for="step3-1" class="pick-item">
-							<input class="pick-item__input" type="radio" name="step3" id="step3-1" value="Break Dance від 6 років">
+					<div for="step4-1" class="pick-item">
+						<label for="step4-1" class="pick-item">
+							<input class="pick-item__input" type="radio" name="step4" id="step4-1" value="Break Dance від 6 років">
 							<div class="pick-item__label">Break Dance від 6 років</div>
 						</label>
 					</div>
 					<!-- ONE-ITEM START -->
-					<div for="step3-2" class="pick-item">
-						<label for="step3-2" class="pick-item">
-							<input class="pick-item__input" type="radio" name="step3" id="step3-2" value="Jazz Funk від 8 років">
+					<div for="step4-2" class="pick-item">
+						<label for="step4-2" class="pick-item">
+							<input class="pick-item__input" type="radio" name="step4" id="step4-2" value="Jazz Funk від 8 років">
 							<div class="pick-item__label">Jazz Funk від 8 років</div>
 						</label>
 					</div>
 					<!-- ONE-ITEM START -->
-					<div for="step3-3" class="pick-item">
-						<label for="step3-3" class="pick-item">
-							<input class="pick-item__input" type="radio" name="step3" id="step3-3" value="Hip Hop від 6 років">
+					<div for="step4-3" class="pick-item">
+						<label for="step4-3" class="pick-item">
+							<input class="pick-item__input" type="radio" name="step4" id="step4-3" value="Hip Hop від 6 років">
 							<div class="pick-item__label">Hip Hop від 6 років</div>
 						</label>
 					</div>
 					<!-- ONE-ITEM START -->
-					<div for="step3-4" class="pick-item">
-						<label for="step3-4" class="pick-item">
-							<input class="pick-item__input" type="radio" name="step3" id="step3-4" value="Heels від 14 + років">
+					<div for="step4-4" class="pick-item">
+						<label for="step4-4" class="pick-item">
+							<input class="pick-item__input" type="radio" name="step4" id="step4-4" value="Heels від 14 + років">
 							<div class="pick-item__label">Heels від 14 + років</div>
 						</label>
 					</div>
 					<!-- ONE-ITEM START -->
-					<div for="step3-5" class="pick-item">
-						<label for="step3-5" class="pick-item">
-							<input class="pick-item__input" type="radio" name="step3" id="step3-5" value="Commercial Dance від 14+ років">
+					<div for="step4-5" class="pick-item">
+						<label for="step4-5" class="pick-item">
+							<input class="pick-item__input" type="radio" name="step4" id="step4-5" value="Commercial Dance від 14+ років">
 							<div class="pick-item__label">Commercial Dance від 14+ років</div>
 						</label>
 					</div>
 					<!-- ONE-ITEM START -->
-					<div for="step3-6" class="pick-item">
-						<label for="step3-6" class="pick-item">
-							<input class="pick-item__input" type="radio" name="step3" id="step3-6" value="Сучасна хореографія від 4 –х років">
+					<div for="step4-6" class="pick-item">
+						<label for="step4-6" class="pick-item">
+							<input class="pick-item__input" type="radio" name="step4" id="step4-6" value="Сучасна хореографія від 4 –х років">
 							<div class="pick-item__label">Сучасна хореографія від 4 –х років</div>
 						</label>
 					</div>
 					<!-- ONE-ITEM START -->
-					<div for="step3-7" class="pick-item">
-						<label for="step3-7" class="pick-item">
-							<input class="pick-item__input" type="radio" name="step3" id="step3-7" value="Ще не визначились. Хочемо більше дізнатись про школу!">
+					<div for="step4-7" class="pick-item">
+						<label for="step4-7" class="pick-item">
+							<input class="pick-item__input" type="radio" name="step4" id="step4-7" value="Ще не визначились. Хочемо більше дізнатись про школу!">
 							<div class="pick-item__label">Ще не визначились. Хочемо більше дізнатись про школу!</div>
 						</label>
 					</div>
 					
-					<div id="next3" class="btn-next-container"></div>
+					<div id="next5" class="btn-next-container"></div>
 				</div>
-				<!-- <input type="hidden" class="hidden-input-3" name="step3"> -->
+				<!-- <input type="hidden" class="hidden-input-3" name="step2"> -->
 			</div>
 			<!-- ONE-STEP END -->
 
@@ -283,6 +317,6 @@
 
 </form>
 
-<script src="/assets/main.js"></script>
+<script src="/assets/main.js?v=1.2"></script>
 </body>
 </html>

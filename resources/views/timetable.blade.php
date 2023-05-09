@@ -19,6 +19,8 @@
 
     <link rel="stylesheet" href="{{ mix('/css/main.css') }}">
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-W1Z0QD9WBQ"></script>
 	<script>

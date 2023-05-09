@@ -18,3 +18,5 @@ Auth::routes(['register' => false]);
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/test', [App\Http\Controllers\HomeController::class, 'test'])->name('test');
 Route::get('/timetable', [App\Http\Controllers\HomeController::class, 'timetable'])->name('timetable');
+
+Route::post('mail', [App\Http\Controllers\MailController::class, 'send']);

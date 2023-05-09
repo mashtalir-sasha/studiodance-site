@@ -144,14 +144,25 @@ $(document).ready(function() {
 			submitHandler: function(form){
 				$(form).ajaxSubmit({
 					type: 'POST',
-					url: 'mail.php',
+					url: '/mail',
+					headers: {
+						'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+					},
 					success: function() {
 						testSlider.goToSlide( $('.step-slide').length - 1 );
 						$('.header-line').slideUp(300);
 						$('.progress-line').slideUp(300);
 						gtag('event','submit',{'event_category':'submit','event_action':'quiz'});
 						fbq('track', 'Lead');
-						window.open('/timetable', '_blank');
+						//window.open('/timetable', '_blank');
+
+						let a = document.createElement("a");
+						document.body.appendChild(a);
+						a.style = "display: none";
+						a.href = '/timetable';
+						a.target = '_blank';
+						a.click();
+						document.body.removeChild(a);
 					}
 				});
 			}
